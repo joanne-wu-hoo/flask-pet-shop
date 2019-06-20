@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %} Add Pet {% endblock %}
+
+{% block content %}
+
+<h1>Add a Pet</h1>
+
+<form method="POST">
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="pet-name">Pet Name:</label>
+      <input name="name" id="pet-name">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="pet-age">Age:</label>
+      <input type="number" name="age" id="pet-age">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="pet-color">Color:</label>
+      <input name="color" id="pet-color">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="pet-photo">Photo URL:</label>
+      <input name="photo" id="pet-photo">
+    </div>
+  </div>
+
+  <button class="btn btn-success">Add pet</button>
+</form>
+
+{% endblock %}

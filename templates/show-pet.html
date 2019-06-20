@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} Meet {{ pet.name }} {% endblock %}
+
+{% block content %} 
+
+<h1>{{ pet.name }}</h1>
+<br>
+<img src="{{ pet.photo_url }}" class="rounded-circle">
+<br>
+<br>
+<p>{{ pet.name }} is {{ pet.color }} and is {{ pet.age }} years old.</p>
+
+{% endblock %}
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>{% block title %} title should go here {% endblock %}</title>
+  <link rel="stylesheet"
+        href="https://unpkg.com/bootswatch@4/dist/minty/bootstrap.css">
+  <link rel="stylesheet" href="/static/main.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark bg-primary mb-4">
+  <a class="navbar-brand" href="/">Pet Shop</a>
+
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="/add-pet">Add New Pet</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container text-center">
+
+<!-- TODO: we want flashed messages to appear here! -->
+
+{% block content %} content will go here {% endblock %}
+
+</div>
+
+<script src="https://unpkg.com/jquery"></script>
+<script src="https://unpkg.com/popper.js"></script>
+<script src="https://unpkg.com/bootstrap@4/dist/js/bootstrap.js"></script>
+
+</body>
+</html>

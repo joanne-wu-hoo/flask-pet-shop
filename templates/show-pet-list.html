@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} Welcome! {% endblock %}
+
+{% block content %}
+
+{% for msg in get_flashed_messages() %}
+    <p>{{ msg }}</p>
+{% endfor %}
+
+<h1>Welcome to Pet Shop!</h1>
+<br>
+<h2>Our Pets</h2>
+<div class="list-group">
+    {% for pet in pets %}
+    <a href="/pets/{{ pet.id }}" class="list-group-item list-group-item-action">{{ pet.id.title() }}</a>
+    {% endfor %}
+</div>
+  
+{% endblock %}
